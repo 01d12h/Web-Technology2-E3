@@ -1,0 +1,131 @@
+/* 기본 공통 */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* ===== NAV 1: 큰 화면 = 가로 메뉴, 작은 화면 = 세로 리스트 ===== */
+.nav1 {
+  background-color: lightgray;
+}
+.main-nav1 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-nav1 li {
+  margin: 10px;
+}
+.main-nav1 a {
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 800px) {
+  .main-nav1 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ===== NAV 2: 모든 화면에서 햄버거 메뉴 ===== */
+.nav2 {
+  background-color: lightgray;
+  position: relative;
+}
+.hamburger-icon2 {
+  display: block;
+  padding: 10px;
+}
+.hamburger-icon2 svg {
+  width: 40px;
+  height: 40px;
+}
+.side-nav2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  transition: 0.3s ease;
+}
+.side-nav2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0 0;
+  text-align: center;
+}
+.side-nav2 li {
+  margin: 20px 0;
+}
+.side-nav2 a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* ===== NAV 3: 큰 화면엔 가로 메뉴 / 작은 화면엔 햄버거 메뉴 ===== */
+.nav3 {
+  background-color: lightgray;
+}
+.main-nav3 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.main-nav3 li {
+  margin: 10px;
+}
+.main-nav3 a {
+  text-decoration: none;
+  color: black;
+}
+.hamburger-icon3 {
+  display: none;
+  padding: 10px;
+}
+.hamburger-icon3 svg {
+  width: 40px;
+  height: 40px;
+}
+.side-nav3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  transition: 0.3s ease;
+}
+.side-nav3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0 0;
+  text-align: center;
+}
+.side-nav3 li {
+  margin: 20px 0;
+}
+.side-nav3 a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+@media (max-width: 800px) {
+  .main-nav3 {
+    display: none;
+  }
+  .hamburger-icon3 {
+    display: block;
+  }
+}
