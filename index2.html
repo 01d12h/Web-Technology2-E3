@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nav 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav2">
+    <a href="#" class="hamburger-icon2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+    </a>
+    <div class="side-nav2">
+      <ul>
+        <li><a href="#" id="close2">X</a></li>
+        <li><a href="/index.html">Nav1</a></li>
+        <li><a href="/index2.html">Nav2</a></li>
+        <li><a href="/index3.html">Nav3</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const btnOpen2 = document.querySelector('.hamburger-icon2');
+    const btnClose2 = document.querySelector('#close2');
+    const nav2 = document.querySelector('.side-nav2');
+
+    btnOpen2.addEventListener('click', () => {
+      nav2.style.width = '100vw';
+    });
+    btnClose2.addEventListener('click', () => {
+      nav2.style.width = '0';
+    });
+  </script>
+</body>
+</html>
